@@ -33,7 +33,7 @@ def log_input(message):
 
 
 async def send(msg, message):
-    if len(str(msg)) > 2000:
+    if len(str(msg)) > 4000:
         with BytesIO(str.encode(msg)) as out_file:
             out_file.name = "output.txt"
             await sendFile(message, out_file)
